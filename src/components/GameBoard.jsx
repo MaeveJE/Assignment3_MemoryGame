@@ -33,9 +33,9 @@ function GameBoard({ difficulty, onGameOver }) {
   const [deck, setDeck] = useState(cards);
   const [flippedIds, setFlippedIds] = useState([]);
   const [timeLeft, setTimeLeft] = useState(config.timeLimit);
-  const lockRef = useRef(false); // prevents clicking during a mismatch check
+  const lockRef = useRef(false); 
 
-  // Timer
+
   useEffect(() => {
     if (timeLeft <= 0) {
       onGameOver('lose');
@@ -45,7 +45,7 @@ function GameBoard({ difficulty, onGameOver }) {
     return () => clearTimeout(id);
   }, [timeLeft, onGameOver]);
 
-  // Win check
+
   useEffect(() => {
     if (deck.length > 0 && deck.every((c) => c.isMatched)) {
       onGameOver('win');

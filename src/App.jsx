@@ -6,9 +6,9 @@ import ResultScreen from './components/ResultScreen';
 import './index.css';
 
 function App() {
-  const [screen, setScreen] = useState('home'); // 'home' | 'difficulty' | 'game' | 'result'
+  const [screen, setScreen] = useState('home'); 
   const [difficulty, setDifficulty] = useState(null);
-  const [result, setResult] = useState(null); // 'win' | 'lose'
+  const [result, setResult] = useState(null); 
 
   const goHome = () => {
     setScreen('home');
